@@ -5,13 +5,11 @@
     <title></title>
   </head>
   <body>
-    <div class="posts-show-item">
-      <%=@post.content %>
-      <div class="post-time">
-        <%=@post.created_at %>
-      </div>
-      <%=link_to("編集","/posts/#{@post.id}/edit") %>
-      <%=link_to("削除","/posts/#{@post.id}/destroy",{method:"post"}) %>
+    <div class="name-email">
+      <img src="<%="/public/#{@user.image_name}" %>">
+            <h2><%=@user.name %></h2>
+        <p><%=@user.email %></p>
+        <%=link_to("編集","/users/#{@user.id}/edit") %>
     </div>
   </body>
 </html>

@@ -5,10 +5,10 @@
     <title></title>
   </head>
   <body>
-    <% @posts.each do |post| %>
-      <div class="posts-index-item">
-        <%=link_to(post.content,"/posts/#{post.id}") %>
-      </div>
+    <% @users.each do |user| %>
+     <div class="user-name">
+      <%=link_to(user.name,"/users/#{user.id}") %>
+     </div>
     <% end %>
   </body>
 </html>
